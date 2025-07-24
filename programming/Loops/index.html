@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some Loops related problems </title>
+</head>
+<body>
+    <script> 
+
+       //1. Write a program to print all even numbers and odd nnuber from an array.
+       
+       function evenNum(){
+        let num = [24,31,64,73,44,36,87,28]
+        for(let i=0;i< num.length;i++){
+         if(num[i]%2 == 0){
+            console.log(`${num[i]} is even number`)
+         }
+         else{
+            console.log(`${num[i]} is odd number`)
+         }
+       }
+    }
+       evenNum()
+ 
+    //2.Write a function that returns the number of negative numbers in an array.
+    
+    function findNegNum(){
+        let number = [22,-34,45,25,-32,54]
+        count=0
+        for(let i=0 ; i<number.length;i++){
+            if(number[i]<0){
+             count++
+            }
+        }
+        return count
+        
+    }
+    
+    let result =  findNegNum()
+    console.log(result)
+ 
+    //3.Write a function that returns the smallest number in an array.
+    function smallest(){
+        let arr = [-56,78,-54,34,-76,84]
+      let current = Infinity
+      for(let i=0;i<arr.length;i++){
+        if( arr[i] < current){
+            current = arr[i]
+        }
+      }
+      return  current
+    }
+   let smallestNum = smallest()
+   console.log(smallest())
+
+   //4.Write a function that returns the largest number in an array.
+   function largest(){
+    let data = [24,87,99,45,34,9]
+    let highest = -Infinity
+    for(let i=0 ; i<data.length;i++){
+        if(data[i]>highest){
+            highest = data[i]
+        }
+    }
+    return highest
+   }
+   let val = largest()
+   console.log(val)
+
+   //5.Write a function secondLargest(arr) that returns the second largest distinct number in an array.
+    </script>
+</body>
+</html>
