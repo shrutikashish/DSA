@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Search</title>
+</head>
+<body>
+    <script> 
+       // Binary Search work on Sorted Array
+       let arr= [12,16,14,24,34,45,56]
+      let search =  function(arr,target){
+        let left = 0
+        let right = arr.length-1
+        while(right >= left){
+          let middle = Math.floor(left+right/2)
+          if(target==arr [middle]){
+            return middle 
+          }
+          else if(target<arr[middle]){
+           right = middle -1
+          }
+          else{
+            left = middle+1
+          }
+        }
+        return -1
+      }
+     
+      let binarySearch = search(arr,56)
+      console.log("item is on ",binarySearch)
+    </script>
+</body>
+</html>
